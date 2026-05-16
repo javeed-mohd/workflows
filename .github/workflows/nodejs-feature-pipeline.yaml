@@ -11,15 +11,11 @@ on:
         description: 'Component name'
         required: true
         type: string
-      environment:
-        description: 'Environment name'
-        required: true
-        type: string
 
 jobs:
   # Job name
   trigger:
-    runs-on: ubuntu-latest            # Github hosted runners
+    runs-on: self-hosted            # Github hosted runners
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
